@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maria Inês & Gabriel — Casamento</title>
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Tipografia editorial -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Moon+Dance&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" aria-label="Navegação principal">
+    <div class="nav-left">
+      <a href="#rsvp"></a>
+    </div>
+
+    <div class="nav-center">Maria Inês Sequeira &amp; Gabriel Meneses · 27.06.26</div>
+
+    <div class="nav-right">
+      <a href="#rsvp" class="nav-rsvp">Confirme a Sua Presença</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <img class="hero-img" src="foto.jpg" alt="Maria Inês e Gabriel Meneses" />
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-topline">Vamos casar!</div>
+      <h1 class="hero-title">Inês &amp; Gabriel</h1>
+      <div class="hero-date">27 · 06 · 2026</div>
+    </div>
+  </header>
+
+  <!-- Convite -->
+  <section class="split" id="convite" aria-label="Convite">
+      <div class="split-media">
+          <img src="trio.jpg" alt="Foto do casal" />
+      </div>
+
+      <div class="split-content">
+          <p class="split-place2">
+              <strong>Estamos a preparar um dia cheio de amor, sorrisos e boas memórias</strong><br />
+              <strong>e queremos muito partilhá-lo convosco.</strong><br />
+          </p>
+      </div>
+  </section>
+
+  <!-- CERIMÓNIA -->
+  <section class="split reverse" id="cerimonia" aria-label="Cerimónia">
+    <div class="split-media">
+      <img src="batizado.jpg" alt="Foto do casal" />
+    </div>
+
+    <div class="split-content">
+      <h2>Cerimónia</h2>
+      <p class="split-time">14h00</p>
+      <p class="split-place">
+        <strong>Sé Catedral da Guarda</strong><br />
+        Guarda, Portugal
+      </p>
+      <a class="split-link" href="https://www.google.com/maps/search/Sé+da+Guarda" target="_blank" rel="noreferrer">
+        Mapa
+      </a>
+    </div>
+  </section>
+
+  <!-- RECEÇÃO -->
+  <section class="split" id="rececao" aria-label="Receção">
+    <div class="split-media">
+      <img src="casal.jpg" alt="Foto do casal" />
+    </div>
+
+    <div class="split-content">
+      <h2>Receção</h2>
+      <p class="split-time">Das 16h30 às 24h00</p>
+      <p class="split-place">
+        <strong>Quinta da Cerca</strong><br />
+        Guimarães de Tavares
+      </p>
+      <a class="split-link" href="https://www.google.com/maps/search/Quinta+da+Cerca,+Guimarães+de+Tavares"
+        target="_blank" rel="noreferrer">
+        Mapa
+      </a>
+    </div>
+  </section>
+
+
+  <!-- RSVP -->
+  <section class="rsvp" id="rsvp" aria-label="Confirmação de presença">
+    <div class="rsvp-inner">
+      <h2>Confirme a Sua Presença</h2>
+      <p class="subtitle">
+        Preencha o formulário abaixo até <strong>1 de Maio de 2026</strong> 💕
+      </p>
+
+      <form action="https://formspree.io/f/xkgqykbp" method="POST" class="confirmation-form" id="confirmationForm">
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="guests">Nº de Adultos</label>
+            <input type="number" id="guests" name="number-of-guests" placeholder="0" min="1" max="10" required />
+          </div>
+
+          <div class="form-group">
+            <label for="guests_children">Nº de Crianças (&le; 10 anos)</label>
+            <input type="number" id="guests_children" name="number-of-guests-children" placeholder="0" min="0"
+              max="10" />
+          </div>
+        </div>
+          <div id="guests-names-container"></div>
+
+
+          <div class="form-group">
+              <label for="message">Restrições alimentares e alergias</label>
+              <textarea
+                      id="message"
+                      name="dietary_restrictions"
+                      rows="3"
+                      placeholder="Ex: vegetariano, intolerância à lactose, alergia a frutos secos..."
+              ></textarea>
+          </div>
+
+
+          <button type="submit" id="submit-btn">💌 Confirmar Presença</button>
+        <div id="confirmation-message" class="confirmation-message"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- CONTACTOS -->
+  <section class="contacts" aria-label="Contactos">
+    <h2>Contatos</h2>
+    <p>antoniogabrielmeneses@gmail.com</p>
+    <p>914 887 717</p>
+      <p>mines.seq@gmail.com</p>
+      <p>963 128 628</p>
+  </section>
+
+  <footer class="footer">
+    <p>Vem fazer parte do nosso dia! 💕</p>
+  </footer>
+
+  <!-- 🎵 Música -->
+  <audio id="bg-music" preload="metadata" loop>
+    <source src="fly.mp3" type="audio/mpeg" />
+  </audio>
+
+  <button id="music-toggle" aria-label="Controlar música">
+    <svg id="music-icon" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
+      <path d="M8 5v14l11-7z" fill="currentColor"></path>
+    </svg>
+  </button>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+
+</html>
